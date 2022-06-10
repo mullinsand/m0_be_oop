@@ -60,7 +60,7 @@ p dracula
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
-
+=end
 class Dragon
   attr_reader :times_eaten, :is_hungry
   def initialize(name, rider, color)
@@ -72,7 +72,7 @@ class Dragon
   end
 
   def eat(times_eaten)
-      @times_eaten = times_eaten
+      @times_eaten = times_eaten + 1
       if times_eaten == 4
         @is_hungry = false
       end
@@ -87,7 +87,7 @@ p smaug
 smaug.eat(4)
 p smaug
 
-=end
+=begin
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic disposition attribute (string)
@@ -105,7 +105,12 @@ class Hobbit
     @age = 0
     @is_adult = false
     @is_old = false
-    @has_ring = false
+    @has_ring =
+      if name == "Frodo"
+        true
+      else
+        false
+      end
   end
 
   def celebrate_birthday
@@ -144,5 +149,4 @@ p sam
 
 frodo = Hobbit.new("Frodo", "cautious")
 p frodo
-frodo.ring_bearer
-p frodo
+=end
