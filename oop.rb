@@ -2,7 +2,7 @@
 # it should have a dynamic name attribute
 # it should have a color attribute, that is silver by default
 # it should have a method called "say" that returns whatever string is passed in, with "*~*" at the beginning and end of the string
-=begin
+
 class Unicorn
   attr_reader :say
   def initialize(can_fly, horn_type)
@@ -60,7 +60,7 @@ p dracula
 #  it should have a dynamic color attribute (string)
 #  it should have a is_hungry attribute that is true by default
 #  it should have a eat method. If the dragon eats 4 times, it is no longer hungry
-=end
+
 class Dragon
   attr_reader :times_eaten, :is_hungry
   def initialize(name, rider, color)
@@ -71,7 +71,7 @@ class Dragon
     @times_eaten = 0
   end
 
-  def eat(times_eaten)
+  def eat
       @times_eaten = times_eaten + 1
       if times_eaten == 4
         @is_hungry = false
@@ -82,12 +82,15 @@ end
 
 smaug = Dragon.new("smaug", "none", "gold")
 p smaug
-smaug.eat(2)
+smaug.eat
 p smaug
-smaug.eat(4)
+smaug.eat
+smaug.eat
+p smaug
+smaug.eat
 p smaug
 
-=begin
+
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic disposition attribute (string)
@@ -149,4 +152,3 @@ p sam
 
 frodo = Hobbit.new("Frodo", "cautious")
 p frodo
-=end
