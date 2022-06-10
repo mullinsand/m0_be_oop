@@ -99,13 +99,13 @@ p smaug
 
 class Hobbit
   attr_reader :name, :age, :is_adult, :is_old, :has_ring
-  def intialize(name, disposition)
+  def initialize(name, disposition)
     @name = name
     @disposition = disposition
     @age = 0
     @is_adult = false
     @is_old = false
-    @has_ring = flase
+    @has_ring = false
   end
 
   def celebrate_birthday
@@ -127,3 +127,17 @@ class Hobbit
     end
   end
 end
+
+sam = Hobbit.new("Sam", "cheerful")
+p sam
+
+sam.celebrate_birthday
+p sam
+
+sam.set_age(32)
+sam.celebrate_birthday
+p sam
+
+sam.set_age(100)
+sam.celebrate_birthday
+p sam
