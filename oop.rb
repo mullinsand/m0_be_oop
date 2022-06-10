@@ -110,7 +110,7 @@ class Hobbit
 
   def celebrate_birthday
     @age = age + 1
-    if @age >= 33
+    if @age >= 33 && @age <101
       @is_adult = true
     elsif @age >= 101
       @is_old = true
@@ -129,10 +129,10 @@ class Hobbit
 end
 
 sam = Hobbit.new("Sam", "cheerful")
-p sam
+
 
 sam.celebrate_birthday
-p sam
+
 
 sam.set_age(32)
 sam.celebrate_birthday
@@ -141,3 +141,8 @@ p sam
 sam.set_age(100)
 sam.celebrate_birthday
 p sam
+
+frodo = Hobbit.new("Frodo", "cautious")
+p frodo
+frodo.ring_bearer
+p frodo
